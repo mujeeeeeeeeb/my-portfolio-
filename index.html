@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mujeeb Ur Rahiman | Cybersecurity Student</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <h1 class="logo">Mujeeb<span> Ur Rahiman</span></h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="container hero-content">
+      <h2>Hello, I’m <span>Mujeeb Ur Rahiman</span></h2>
+      <p>A first-year <strong>Cybersecurity student</strong> passionate about digital defense, ethical hacking, and network security.</p>
+      <a href="#contact" class="btn">Let’s Connect</a>
+    </div>
+    <!-- angled divider -->
+    <div class="divider"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container fade-in">
+      <h2>About Me</h2>
+      <p>
+        I am a first-year engineering student at P.A engineering college, specializing in
+        <strong>Cybersecurity</strong>. My focus is on ethical hacking, system defense,
+        and secure coding. I enjoy exploring Linux environments, packet analysis,
+        and participating in Capture The Flag challenges (CTFs).
+      </p>
+    </div>
+  </section>
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="section alt">
+    <div class="container fade-in">
+      <h2>Achievements</h2>
+      <div class="achievement-card">
+        <h3>HackSummit Winner</h3>
+        <p>Won <strong>HackSummit</strong> at PA College of Engineering, showcasing innovation and problem-solving skills in cybersecurity.</p>
+      </div>
+    </div>
+  </section>
+  <!-- SKILLS -->
+  <section id="skills" class="section alt">
+    <div class="container fade-in">
+      <h2>Skills & Tools</h2>
+      <div class="skills-grid">
+        <span>C, Python (beginner)</span>
+        <span>Networking Basics (IP, DNS, Protocols)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container fade-in">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="card">
+          <h3>Save Bite</h3>
+          <p>A Website for foodmanagement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section alt">
+    <div class="container fade-in">
+      <h2>Contact</h2>
+      <!-- Example around line 95 -->
+      <p>
+        <a href="https://www.linkedin.com/in/mujeeb-rahman-0a5030304" target="_blank" class="contact-icon">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" width="24" height="24"> LinkedIn
+        </a>
+      </p>
+      <p>
+        <a href="mailto:arifrif1915@gmail.com" class="contact-icon">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email" width="24" height="24"> arifrif1915@gmail.com
+        </a>
+      </p>
+      
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Mujeeb Ur Rahiman </p>
+    </div>
+  </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          entry.target.classList.remove("appear");
+          return;
+        } else {
+          entry.target.classList.add("appear");
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+</body>
+</html>
