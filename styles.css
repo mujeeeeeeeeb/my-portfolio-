@@ -279,3 +279,80 @@ footer {
 .contact-icons a.linkedin:hover {
   color: #005582;
 }
+
+/* Mobile Navbar */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 15px;
+  }
+
+  header nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  header nav ul {
+    gap: 15px;
+  }
+  .hero {
+    padding: 100px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 80px 10px;
+  }
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}

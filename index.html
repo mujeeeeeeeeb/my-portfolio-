@@ -7,8 +7,14 @@
   <link rel="stylesheet" href="styles.css" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- Extra Fonts for Lo-fi Aesthetic -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Floating Art Elements -->
+  <div class="floating-art vinyl"></div>
+  <div class="floating-art star"></div>
+  <div class="floating-art cloud"></div>
   <!-- HEADER -->
   <header>
     <div class="container">
@@ -22,6 +28,7 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     </div>
   </header>
 
@@ -127,6 +134,13 @@
     faders.forEach(fader => {
       appearOnScroll.observe(fader);
     });
+
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('header nav ul');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
   </script>
 </body>
 </html>
